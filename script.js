@@ -46,7 +46,7 @@ function calculate(){
         case "-":
             resultValue = firstOperand - secondOperand;
             break;
-        case "x":
+        case "*":
             resultValue = firstOperand * secondOperand;
             break;
         case "÷":
@@ -96,7 +96,7 @@ function setPercenntage(){
       const buttonText = button.innerText;
       if (/^[0-9,]+$/.test(buttonText)) {
         addDigit(buttonText);
-      } else if (["+", "-", "×", "÷"].includes(buttonText)) {
+      } else if (["+", "-", "*", "÷"].includes(buttonText)) {
         setOperator(buttonText);
       } else if (buttonText === "=") {
         calculate();
